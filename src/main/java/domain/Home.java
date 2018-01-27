@@ -64,5 +64,12 @@ public class Home {
 			public void setElectronicDevices(Collection<ElectronicDevice> electronicDevices) {
 				this.electronicDevices = electronicDevices;
 			}
+			@Override
+			public String toString() {
+				return "Home [id=" + id + ", taille=" + taille + ", nbrePieces=" + nbrePieces + ", heaters=" + heaters
+						+ ", electronicDevices=" + electronicDevices + "]";
+			}
+			
+			
 	}
 

@@ -7,12 +7,12 @@ import javax.persistence.criteria.*;
 
 import domain.*;
 
-public class DaoDevices {
+public class DaoHome {
 	
 	Dao managerObject;
 	EntityManager manager;
     
-	public DaoDevices() {
+	public DaoHome() {
 		managerObject = new Dao();
 		manager = managerObject.getManager();
 	} 
@@ -25,17 +25,17 @@ public class DaoDevices {
 		manager.close();
 	}
 	
-    public void listDevice() {
-        List<Devices> resultList = manager.createQuery("Select a From Person a", Devices.class).getResultList();
+    public void listHome() {
+        List<Home> resultList = manager.createQuery("Select a From Person a", Home.class).getResultList();
         
-        for (Devices device : resultList) {
-            System.out.println(device.toString());
+        for (Home home : resultList) {
+            System.out.println(home.toString());
         }
     }
     
-   public void listDevices() {
+   public void listHomes() {
 	CriteriaBuilder criteriaBuilder = manager.getCriteriaBuilder();
-	CriteriaQuery<Devices> query = criteriaBuilder.createQuery(Devices.class);
+	CriteriaQuery<Home> query = criteriaBuilder.createQuery(Home.class);
 	Root<Devices> from = query.from(Devices.class);
 	/* for(Person p: from) {
 		 System.out.println(p.toString());
@@ -45,9 +45,9 @@ public class DaoDevices {
    }
    
    
-   public void modify(Devices device)
+   public void modify(Home home)
    {
-	   manager.merge(device);
+	   manager.merge(home);
    }
 }
 

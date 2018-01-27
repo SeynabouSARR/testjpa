@@ -6,8 +6,10 @@ import javax.persistence.Id;
 
 @Entity
 public class ElectronicDevice extends Devices{
+	
 	long consMoyenne;
 	public ElectronicDevice() {
+		consMoyenne=0;
 		
 	}
 	public ElectronicDevice( long consMoyenne) {
@@ -20,6 +22,11 @@ public class ElectronicDevice extends Devices{
 		this.consMoyenne = consMoyenne;
 	}
 	
+	
+	@Override
+	public String toString() {
+		return "ElectronicDevice [consMoyenne=" + consMoyenne + "]";
+	}
 	
 
 }
