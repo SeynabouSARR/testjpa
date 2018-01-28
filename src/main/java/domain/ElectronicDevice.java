@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class ElectronicDevice extends Devices{
+public class ElectronicDevice extends Device{
 	
 	long consMoyenne;
 	public ElectronicDevice() {
