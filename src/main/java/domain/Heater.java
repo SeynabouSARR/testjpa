@@ -6,7 +6,10 @@ import javax.persistence.Id;
 
 @Entity
 public class Heater extends Device{
+	
 	public Heater() {
 		
 	}
+	
+	
 }

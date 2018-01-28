@@ -39,7 +39,9 @@ public class DaoPerson {
 	public void createPerson(Person p){
 		transaction.begin();
 		manager.persist(p);
+		
 		transaction.commit();
+		System.out.println("Insertion "+p.getId());
 	}
 	
 	/**
@@ -88,7 +90,10 @@ public class DaoPerson {
     */
    public void update(Person person)
    {
-	   manager.merge(person);
+	   transaction.begin();
+	   //manager.merge(person);
+	   
+	   transaction.commit();
    }
 
 
@@ -99,7 +104,9 @@ public class DaoPerson {
     */
 	public void delete(Person person)
 	{
+		transaction.begin();
 	   manager.remove(person);
+	   transaction.commit();
 	}
 }
 
