@@ -11,10 +11,12 @@ public class DaoHeater {
 	
 	Dao managerObject;
 	EntityManager manager;
+	EntityTransaction transaction;
     
 	public DaoHeater() {
 		managerObject = new Dao();
 		manager = managerObject.getManager();
+		transaction = manager.getTransaction();
 	} 
       
 	
@@ -25,26 +27,65 @@ public class DaoHeater {
 		manager.close();
 	}
 	
-    public void listHeater() {
-        List<Heater> resultList = manager.createQuery("Select a From Person a", Heater.class).getResultList();
+	
+	
+	/************************CRUD*************************/
+	/************************CRUD*************************/
+	/************************CRUD*************************/
+	
+	/**
+	 * Crée une Heater dans la base de données
+	 */
+	public void createHeater(Heater h){
+		transaction.begin();
+		manager.persist(h);
+		transaction.commit();
+	}
+	
+	/**
+	 * Afficher les données relatives à toutes les Heaters
+	 */
+    public void showHeaters() {
+        List<Heater> resultList = manager.createQuery("Select a From Heater a", Heater.class).getResultList();
         
         for (Heater heater : resultList) {
             System.out.println(heater.toString());
         }
     }
     
-   public void listHeaters() {
-	CriteriaBuilder criteriaBuilder = manager.getCriteriaBuilder();
-	CriteriaQuery<Heater> query = criteriaBuilder.createQuery(Heater.class);
-	Root<Heater> from = query.from(Heater.class);
-	/* for(Person p: from) {
-		 System.out.println(p.toString());
-	 }
-	//query.select(from.get("a"))
-	     .where(from.get("a").in(1, 2, 3, 4));*/
+    /**
+     * Reccupère la liste des Heaters de la base de données
+     * @return la liste des Heaters
+     */
+   public List<Heater> getHeaters() {
+
+	   CriteriaBuilder criteriaBuilder = manager.getCriteriaBuilder();
+		CriteriaQuery<Heater> criteriaQuery = criteriaBuilder.createQuery(Heater.class);
+		Root<Heater> from = criteriaQuery.from(Heater.class);
+		criteriaQuery.select(from);
+		TypedQuery<Heater> query = manager.createQuery(criteriaQuery);
+		List<Heater> heaters = query.getResultList();
+		
+		return heaters;
    }
    
    
+   /**
+    * Recherche une Heater ayant pour identifiant id
+    * @param id : identification de la Heater à reccuperer
+    * @return la Heater ayant pour identifiant id
+    */
+   public Heater getHeater(int id)
+   {
+	  Long identifiant = new Long(id);
+	  return manager.find(Heater.class, identifiant);
+	   
+   }
+   
+   /**
+    * Mis à jour la Heater dans la base de données
+    * @param Heater : nouvelle données
+    */
    public void update(Heater heater)
    {
 	   manager.merge(heater);
@@ -52,7 +93,10 @@ public class DaoHeater {
 
 
 
-	
+   /**
+    * Supprime le Heater Heater
+    * @param Heater : Heater à supprimer
+    */
 	public void delete(Heater heater)
 	{
 	   manager.remove(heater);
