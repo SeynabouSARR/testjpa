@@ -36,6 +36,7 @@ public class Main {
 		test.createPerson(p);
 		//test.listPerson();
 		test.listPersons();
+		System.out.println(test.manager.find(Person.class, new Long(2)).toString());
 		//test.DeletePerson(p);
 	} catch (Exception e) {
 		e.printStackTrace();

@@ -36,7 +36,7 @@ public class DaoHome {
    public void listHomes() {
 	CriteriaBuilder criteriaBuilder = manager.getCriteriaBuilder();
 	CriteriaQuery<Home> query = criteriaBuilder.createQuery(Home.class);
-	Root<Devices> from = query.from(Devices.class);
+	Root<Home> from = query.from(Home.class);
 	/* for(Person p: from) {
 		 System.out.println(p.toString());
 	 }
@@ -45,9 +45,17 @@ public class DaoHome {
    }
    
    
-   public void modify(Home home)
+   public void update(Home home)
    {
 	   manager.merge(home);
    }
+
+
+
+	
+	public void delete(Home home)
+	{
+	   manager.remove(home);
+	}
 }
 

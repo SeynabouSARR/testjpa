@@ -7,12 +7,12 @@ import javax.persistence.criteria.*;
 
 import domain.*;
 
-public class DaoDevices {
+public class DaoHeater {
 	
 	Dao managerObject;
 	EntityManager manager;
     
-	public DaoDevices() {
+	public DaoHeater() {
 		managerObject = new Dao();
 		manager = managerObject.getManager();
 	} 
@@ -25,18 +25,18 @@ public class DaoDevices {
 		manager.close();
 	}
 	
-    public void listDevice() {
-        List<Devices> resultList = manager.createQuery("Select a From Person a", Devices.class).getResultList();
+    public void listHeater() {
+        List<Heater> resultList = manager.createQuery("Select a From Person a", Heater.class).getResultList();
         
-        for (Devices device : resultList) {
-            System.out.println(device.toString());
+        for (Heater heater : resultList) {
+            System.out.println(heater.toString());
         }
     }
     
-   public void listDevices() {
+   public void listHeaters() {
 	CriteriaBuilder criteriaBuilder = manager.getCriteriaBuilder();
-	CriteriaQuery<Devices> query = criteriaBuilder.createQuery(Devices.class);
-	Root<Devices> from = query.from(Devices.class);
+	CriteriaQuery<Heater> query = criteriaBuilder.createQuery(Heater.class);
+	Root<Heater> from = query.from(Heater.class);
 	/* for(Person p: from) {
 		 System.out.println(p.toString());
 	 }
@@ -45,14 +45,17 @@ public class DaoDevices {
    }
    
    
-   public void update(Devices device)
+   public void update(Heater heater)
    {
-	   manager.merge(device);
+	   manager.merge(heater);
    }
-   
-   public void delete(Devices device)
-   {
-	   manager.remove(device);
-   }
+
+
+
+	
+	public void delete(Heater heater)
+	{
+	   manager.remove(heater);
+	}
 }
 

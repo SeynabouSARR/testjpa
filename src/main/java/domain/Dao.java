@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -65,13 +66,20 @@ public class Dao {
     
    public void listPersons() {
 	CriteriaBuilder criteriaBuilder = manager.getCriteriaBuilder();
-	CriteriaQuery<Person> query = criteriaBuilder.createQuery(Person.class);
-	Root<Person> from = query.from(Person.class);
+	CriteriaQuery<Person> criteriaQuery = criteriaBuilder.createQuery(Person.class);
+	Root<Person> from = criteriaQuery.from(Person.class);
+	criteriaQuery.select(from);
+	TypedQuery<Person> query = manager.createQuery(criteriaQuery);
+	List<Person> persons = query.getResultList();
+	
+	
 	/* for(Person p: from) {
 		 System.out.println(p.toString());
 	 }
 	//query.select(from.get("a"))
 	     .where(from.get("a").in(1, 2, 3, 4));*/
+	
+	System.out.println("Criteria "+persons.size());
    }
 }
 
