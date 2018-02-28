@@ -11,9 +11,9 @@ public class DaoPerson {
 	Dao managerObject;
 	EntityManager manager;
 	EntityTransaction transaction;
-    /**
-     * La gestionnaire de Personne
-     */
+/**
+ * La gestionnaire de Personne.
+ */
 	public DaoPerson() {
 		managerObject = new Dao();
 		manager = managerObject.getManager();
@@ -29,8 +29,8 @@ public class DaoPerson {
 		
 	/************************CRUD*************************/	
 	/**
-	 * Crée une personne dans la base de données
-	 * @param p: element à inserer
+	 * Crée une personne dans la base de données.
+	 * @param p: element à inserer.
 	 */
 	public void createPerson(Person p){
 		transaction.begin();
@@ -39,22 +39,20 @@ public class DaoPerson {
 		transaction.commit();
 		System.out.println("Insertion "+p.getId());
 	}
-	
-	/**
-	 * Afficher les données relatives à toutes les personnes
-	 */
-    public void showPersons() {
-        List<Person> resultList = manager.createQuery("Select a From Person a", Person.class).getResultList();
-        
-        for (Person Person : resultList) {
-            System.out.println(Person.toString());
+/**
+ * Afficher les données relatives à toutes les personnes.
+*/
+  public void showPersons() {
+       List<Person> resultList = manager.createQuery("Select a From Person a", Person.class).getResultList(); 
+       for (Person Person : resultList) {
+          System.out.println(Person.toString());
         }
     }
     
-    /**
-     * Reccupère la liste des personnes de la base de données
-     * @return la liste des personnes
-     */
+/**
+ * Reccupère la liste des personnes de la base de données.
+ * @return la liste des personnes.
+*/
    public List<Person> getPersons() {
 	   CriteriaBuilder criteriaBuilder = manager.getCriteriaBuilder();
 		CriteriaQuery<Person> criteriaQuery = criteriaBuilder.createQuery(Person.class);
@@ -66,11 +64,11 @@ public class DaoPerson {
 		return persons;
    }
      
-   /**
-    * Recherche une personne ayant pour identifiant id
-    * @param id : identification de la personne à reccuperer
-    * @return la personne ayant pour identifiant id
-    */
+/**
+ * Recherche une personne ayant pour identifiant id.
+ * @param id : identification de la personne à reccuperer.
+ * @return la personne ayant pour identifiant id.
+*/
   public Person getPerson(int id) {
 	  Long identifiant = new Long(id);
 	  return manager.find(Person.class, identifiant);   
