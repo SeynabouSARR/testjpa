@@ -16,7 +16,7 @@ public class DaoHeater {
 	EntityManager manager;
 	EntityTransaction transaction;
 /**
- * la    
+ * l'ouverture de la connexion. 
  */
   public DaoHeater() {
 	managerObject = new Dao();
