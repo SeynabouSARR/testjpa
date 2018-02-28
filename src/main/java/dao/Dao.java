@@ -20,7 +20,7 @@ public class Dao {
       
 	
 	public EntityManager getManager() {
-		
+		//on initialise le manager si c'est pas déjà fait
 		if(this.manager==null)
 		{
 			this.factory = Persistence.createEntityManagerFactory("mysql");
