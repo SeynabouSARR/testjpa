@@ -12,7 +12,7 @@ import javax.persistence.criteria.Root;
 
 public class Dao {
 	EntityManagerFactory factory ;           
-    EntityManager manager;
+        EntityManager manager;
     
 	public Dao() {
 		
