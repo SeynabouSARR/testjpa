@@ -14,25 +14,24 @@ public class DaoPerson {
 /**
  * La gestionnaire de Personne.
  */
-	public DaoPerson() {
+  public DaoPerson() {
 		managerObject = new Dao();
 		manager = managerObject.getManager();
 		transaction = manager.getTransaction();
-	} 
-    /**
-     * Fermer la connexion
-     */
+	   } 
+/**
+ * Fermer la connexion.
+*/
 	public void close() {
 		managerObject.fermer();
 		manager.close();
-	}
-		
-	/************************CRUD*************************/	
-	/**
-	 * Crée une personne dans la base de données.
-	 * @param p: element à inserer.
-	 */
-	public void createPerson(Person p){
+	}		
+/************************CRUD*************************/	
+/**
+ * Crée une personne dans la base de données.
+ * @param p: element à inserer.
+*/
+  public void createPerson(Person p){
 		transaction.begin();
 		manager.persist(p);
 		

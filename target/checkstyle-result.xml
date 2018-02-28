@@ -204,35 +204,34 @@
 <error line="13" column="9" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="13" column="27" severity="error" message="La variable &apos;transaction&apos; devrait être privée et avoir des accesseurs." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
 <error line="21" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="22" severity="error" message="La première ligne doit se terminer avec un point." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
 <error line="25" column="9" severity="error" message="La méthode &apos;close&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="28" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
 <error line="29" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="30" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="33" column="12" severity="error" message="Balise javadoc @param inutilisé pour &apos;p:&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="35" column="9" severity="error" message="La méthode &apos;createPerson&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
-<error line="35" column="34" severity="error" message="Le paramètre p devrait être final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="35" column="41" severity="error" message="Balise javadoc @param manquante pour &apos;p&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="35" column="43" severity="error" message="Il manque une espace avant &apos;{&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="38" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="40" column="48" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="40" column="49" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="45" column="3" severity="error" message="La méthode &apos;showPersons&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
-<error line="46" severity="error" message="La ligne excède 80 caractères." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="46" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="47" column="20" severity="error" message="Le nom &apos;Person&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalVariableNameCheck"/>
-<error line="51" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="56" column="4" severity="error" message="La méthode &apos;getPersons&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
-<error line="58" severity="error" message="La ligne excède 80 caractères." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="63" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="66" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="72" column="3" severity="error" message="La méthode &apos;getPerson&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
-<error line="72" column="27" severity="error" message="Le paramètre id devrait être final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="74" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="76" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="81" column="3" severity="error" message="La méthode &apos;update&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
-<error line="81" column="22" severity="error" message="Le paramètre person devrait être final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="91" column="3" severity="error" message="La méthode &apos;delete&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
-<error line="91" column="22" severity="error" message="Le paramètre person devrait être final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="32" column="4" severity="error" message="Balise javadoc @param inutilisé pour &apos;p:&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="34" column="3" severity="error" message="La méthode &apos;createPerson&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="34" column="28" severity="error" message="Le paramètre p devrait être final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="34" column="35" severity="error" message="Balise javadoc @param manquante pour &apos;p&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="34" column="37" severity="error" message="Il manque une espace avant &apos;{&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="37" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="39" column="48" severity="error" message="Il manque une espace avant &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="39" column="49" severity="error" message="Il manque une espace après &apos;+&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="44" column="3" severity="error" message="La méthode &apos;showPersons&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="45" severity="error" message="La ligne excède 80 caractères." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="45" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="46" column="20" severity="error" message="Le nom &apos;Person&apos; n&apos;est pas conforme à l&apos;expression &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalVariableNameCheck"/>
+<error line="50" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="55" column="4" severity="error" message="La méthode &apos;getPersons&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="57" severity="error" message="La ligne excède 80 caractères." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="62" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="65" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="71" column="3" severity="error" message="La méthode &apos;getPerson&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="71" column="27" severity="error" message="Le paramètre id devrait être final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="73" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="75" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
+<error line="80" column="3" severity="error" message="La méthode &apos;update&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="80" column="22" severity="error" message="Le paramètre person devrait être final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="90" column="3" severity="error" message="La méthode &apos;delete&apos; n&apos;est pas conçue pour être dérivée - il faut la déclarer abstraite, finale ou la laisser vide." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="90" column="22" severity="error" message="Le paramètre person devrait être final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 </file>
 <file name="C:\Users\Seynabou SARR\eclipse-workspace\sirjpa\testjpa\src\main\java\domain\Device.java">
 <error line="0" severity="error" message="Manquant fichier package-info.java." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
