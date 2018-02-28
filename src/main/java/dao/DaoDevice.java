@@ -21,7 +21,9 @@ public class DaoDevice {
       
 	
     
-	
+	/**
+	 * Fermer la connexion
+	 */
 	public void close() {
 		managerObject.close();
 		manager.close();
@@ -34,7 +36,7 @@ public class DaoDevice {
 	/************************CRUD*************************/
 	
 	/**
-	 * Crée une Device dans la base de données
+	 * CrÃ©e une Device dans la base de donnÃ©es
 	 */
 	public void createDevice(Device d){
 		transaction.begin();
@@ -43,7 +45,7 @@ public class DaoDevice {
 	}
 	
 	/**
-	 * Afficher les données relatives à toutes les Devices
+	 * Afficher les donnÃ©es relatives Ã  toutes les Devices
 	 */
     public void showDevices() {
         List<Device> resultList = manager.createQuery("Select a From Device a", Device.class).getResultList();
@@ -54,7 +56,7 @@ public class DaoDevice {
     }
     
     /**
-     * Reccupère la liste des Devices de la base de données
+     * ReccupÃ¨re la liste des Devices de la base de donnÃ©es avec criteria
      * @return la liste des Devices
      */
    public List<Device> getDevices() {
@@ -72,7 +74,7 @@ public class DaoDevice {
    
    /**
     * Recherche une Device ayant pour identifiant id
-    * @param id : identification de la Device à reccuperer
+    * @param id : identification de la Device Ã  reccuperer
     * @return la Device ayant pour identifiant id
     */
    public Device getDevice(int id)
@@ -83,8 +85,8 @@ public class DaoDevice {
    }
    
    /**
-    * Mis à jour la Device dans la base de données
-    * @param Device : nouvelle données
+    * Mis Ã  jour la Device dans la base de donnÃ©es
+    * @param Device : nouvelle donnÃ©es
     */
    public void update(Device device)
    {
@@ -95,7 +97,7 @@ public class DaoDevice {
 
    /**
     * Supprime le Device Device
-    * @param Device : Device à supprimer
+    * @param Device : Device Ã  supprimer
     */
 	public void delete(Device device)
 	{
