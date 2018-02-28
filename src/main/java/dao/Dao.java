@@ -22,43 +22,43 @@ public class Dao {
   public Dao() { }
 /**
  * getteur de la connexion.
- * @return factory
+ * @return factory : le gestionnaire de connexion
 */
   public final EntityManagerFactory getFactory() {
   return factory;
   }
 /**
  * modifier la connexion.
- * @param factory
+ * @param factory : contient la connexion
 */
-  public final void setFactory(EntityManagerFactory factory) {
+  public void setFactory(EntityManagerFactory factory) {
   this.factory = factory;
   }
 /**
  * modifier la connexion.
  * @param manager
 */
-  public final void setManager(EntityManager manager) {
+  public void setManager(EntityManager manager) {
   this.manager = manager;
   }
 /**
  * getteur de la connexion.
   * @return manager
 */
-  public final EntityManager getManager() {
+ public final EntityManager getManager() {
 		//on initialise le manager si c'est pas déjà fait.
-  if(this.manager==null){
+  if (this.manager==null) {
 	  this.factory = Persistence.createEntityManagerFactory("mysql");
 	  this.manager =  factory.createEntityManager();
-	  }
-  return manager;
   }
+  return manager;
+} 
 /**
 * Fermer la connexion.
 */
-  public void close() {
+  public void fermer() {
 	 manager.close();
 	 factory.close();
-	 }
+  }
 }
 

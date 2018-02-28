@@ -19,16 +19,15 @@ public class DaoElectronicDevice {
 	} 
 	
 	public void close() {
-		managerObject.close();
+		managerObject.fermer();
 		manager.close();
 	}
 		
-	/************************CRUD*************************/
-	/************************CRUD*************************/
-	/************************CRUD*************************/
-	
+/************************CRUD*************************/
+
 	/**
 	 * Crée une ElectronicDevice dans la base de données
+	 * @param d : l'element à inserer dans la base de données
 	 */
 	public void createElectronicDevice(ElectronicDevice d){
 		transaction.begin();

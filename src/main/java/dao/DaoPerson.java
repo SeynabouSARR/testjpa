@@ -11,24 +11,26 @@ public class DaoPerson {
 	Dao managerObject;
 	EntityManager manager;
 	EntityTransaction transaction;
-    
+    /**
+     * La gestionnaire de Personne
+     */
 	public DaoPerson() {
 		managerObject = new Dao();
 		manager = managerObject.getManager();
 		transaction = manager.getTransaction();
 	} 
- 
+    /**
+     * Fermer la connexion
+     */
 	public void close() {
-		managerObject.close();
+		managerObject.fermer();
 		manager.close();
 	}
 		
-	/************************CRUD*************************/
-	/************************CRUD*************************/
-	/************************CRUD*************************/
-	
+	/************************CRUD*************************/	
 	/**
 	 * Crée une personne dans la base de données
+	 * @param p: element à inserer
 	 */
 	public void createPerson(Person p){
 		transaction.begin();
@@ -84,7 +86,6 @@ public class DaoPerson {
    {
 	   transaction.begin();
 	   //manager.merge(person);
-	   
 	   transaction.commit();
    }
 

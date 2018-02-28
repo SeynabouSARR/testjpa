@@ -19,16 +19,14 @@ public class DaoHeater {
 	} 
 	
 	public void close() {
-		managerObject.close();
+		managerObject.fermer();
 		manager.close();
 	}	
-	
-	/************************CRUD*************************/
-	/************************CRUD*************************/
-	/************************CRUD*************************/
+/************************CRUD*************************/
 	
 	/**
 	 * Crée une Heater dans la base de données
+	 * @param h: element à inserer dans la base de données
 	 */
 	public void createHeater(Heater h){
 		transaction.begin();
@@ -78,7 +76,7 @@ public class DaoHeater {
    
    /**
     * Mis à jour la Heater dans la base de données
-    * @param Heater : nouvelle données
+    * @param heater : nouvelle données
     */
    public void update(Heater heater)
    {
@@ -89,7 +87,7 @@ public class DaoHeater {
 
    /**
     * Supprime le Heater Heater
-    * @param Heater : Heater à supprimer
+    * @param heater : Heater à supprimer
     */
 	public void delete(Heater heater)
 	{

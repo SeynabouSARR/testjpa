@@ -5,23 +5,23 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Device {    
+  public class Device {    
 	@Id
 	@GeneratedValue
 	long id;
     public Device() {
 	}  
     
-	public long getId() {
+  public long getId() {
 		return id;
 	}
 	
-	public void setId(long id) {
+  public void setId(long id) {
 		this.id = id;
 	}
 	
 	@Override
-	public String toString() {
+  public String toString() {
 		return "Devices [id=" + id + "]";
 	}
  }

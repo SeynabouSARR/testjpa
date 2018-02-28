@@ -6,7 +6,11 @@ import javax.persistence.*;
 import javax.persistence.criteria.*;
 
 import domain.*;
-
+/**
+ * La classe DaoHome
+ * @author Seynabou SARR & Melaine BOUE
+ *
+ */
 public class DaoHome {	
 	Dao managerObject;
 	EntityManager manager;
@@ -19,16 +23,15 @@ public class DaoHome {
 	} 
 	
 	public void close() {
-		managerObject.close();
+		managerObject.fermer();
 		manager.close();
 	}
 		
 	/************************CRUD*************************/
-	/************************CRUD*************************/
-	/************************CRUD*************************/
 	
 	/**
 	 * Crée une Home dans la base de données
+	 * @param h: element à inserer
 	 */
 	public void createHome(Home h){
 		transaction.begin();
