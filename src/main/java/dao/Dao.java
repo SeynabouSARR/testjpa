@@ -30,7 +30,9 @@ public class Dao {
 		return manager;
 	}
 	
-	
+	/**
+	 * Fermer la connexion
+	 */
 	public void close() {
 		manager.close();
 		factory.close();
