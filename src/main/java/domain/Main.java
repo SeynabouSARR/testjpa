@@ -15,14 +15,15 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-	    DaoPerson personManager = new DaoPerson();
-	    DaoDevice deviceManager = new DaoDevice();
-	    DaoHome homeManager = new DaoHome();
-	    DaoHeater heaterManager = new DaoHeater();
-	    DaoElectronicDevice electronicDeviceManager = new DaoElectronicDevice();
+	    DaoPerson personManager = new DaoPerson(); //Gestionnaire de Person
+	    DaoDevice deviceManager = new DaoDevice(); //Gestionnaire de Device
+	    DaoHome homeManager = new DaoHome();  //Gestionnaire de Home
+	    DaoHeater heaterManager = new DaoHeater(); //Gestionnaire de Heater
+	    DaoElectronicDevice electronicDeviceManager = new DaoElectronicDevice(); //Gestionnaire de ElectronicDevice
 	    
 	    
 		try {
+			//Creation et initialisation
 	        Collection <Heater> heaters=  new ArrayList();
 			Heater heater= new Heater();
 			heaters.add(heater);
@@ -31,23 +32,23 @@ public class Main {
 			Collection<ElectronicDevice> electronicDevices = new ArrayList();
 			ElectronicDevice ed= new ElectronicDevice();
 			electronicDevices.add(ed);
-			Collection<Person> persons = new ArrayList();
+			Collection<Person> persons = new ArrayList(); //une liste d'amis
 			Person p = new Person("SARR", "Seynabou","13 A rue du Bois Perrin",persons, homes,electronicDevices);
 			Collection<Person> pers= new ArrayList();
 			Person person= new Person("BOUE", "MELAINE","BOIS PERRIN", null, null, null);
-			persons.add(person);
+			persons.add(person); 
 			pers.add(p);
 			pers.add(person);
 			
-			
-			heaterManager.createHeater(heater);
-			homeManager.createHome(home);
+			//Ajout des elements dans la base de données
+			heaterManager.createHeater(heater); 
+			homeManager.createHome(home);  
 			electronicDeviceManager.createElectronicDevice(ed);
 			personManager.createPerson(person);
 			personManager.createPerson(p);
 			
-			person.setNom("Le nom modifi�");
-			personManager.update(person);
+			person.setNom("Le nom modifié");
+			personManager.update(person); //mis à jour du nom dans la base de données
 			
 			//test.listPerson();
 			System.out.println("Nombre de personne avec Criteria :"+personManager.getPersons().size());
