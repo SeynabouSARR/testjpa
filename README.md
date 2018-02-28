@@ -1,5 +1,5 @@
 
-<h1>TP 4</h1>
+<h1>TP 2</h1>
 Le TP a pour objectif de manipuler les données avec JPA et un système de base de données HSQL
 
 <h2>Prerequis pour ce projet </h2>
