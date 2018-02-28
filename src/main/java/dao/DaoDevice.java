@@ -7,8 +7,7 @@ import javax.persistence.criteria.*;
 
 import domain.*;
 
-public class DaoDevice {
-	
+public class DaoDevice {	
 	Dao managerObject;
 	EntityManager manager;
 	EntityTransaction transaction;
@@ -18,9 +17,7 @@ public class DaoDevice {
 		manager = managerObject.getManager();
 		transaction = manager.getTransaction();
 	} 
-      
-	
-    
+   
 	/**
 	 * Fermer la connexion
 	 */
@@ -28,8 +25,6 @@ public class DaoDevice {
 		managerObject.close();
 		manager.close();
 	}
-	
-	
 	
 	/************************CRUD*************************/
 	/************************CRUD*************************/

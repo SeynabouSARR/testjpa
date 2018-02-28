@@ -8,7 +8,6 @@ import javax.persistence.criteria.*;
 import domain.*;
 
 public class DaoHeater {
-	
 	Dao managerObject;
 	EntityManager manager;
 	EntityTransaction transaction;
@@ -18,16 +17,11 @@ public class DaoHeater {
 		manager = managerObject.getManager();
 		transaction = manager.getTransaction();
 	} 
-      
-	
-    
 	
 	public void close() {
 		managerObject.close();
 		manager.close();
-	}
-	
-	
+	}	
 	
 	/************************CRUD*************************/
 	/************************CRUD*************************/

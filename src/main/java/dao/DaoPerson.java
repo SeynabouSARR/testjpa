@@ -7,8 +7,7 @@ import javax.persistence.criteria.*;
 
 import domain.*;
 
-public class DaoPerson {
-	
+public class DaoPerson {	
 	Dao managerObject;
 	EntityManager manager;
 	EntityTransaction transaction;
@@ -18,17 +17,12 @@ public class DaoPerson {
 		manager = managerObject.getManager();
 		transaction = manager.getTransaction();
 	} 
-      
-	
-    
-	
+ 
 	public void close() {
 		managerObject.close();
 		manager.close();
 	}
-	
-	
-	
+		
 	/************************CRUD*************************/
 	/************************CRUD*************************/
 	/************************CRUD*************************/
@@ -60,7 +54,6 @@ public class DaoPerson {
      * @return la liste des personnes
      */
    public List<Person> getPersons() {
-
 	   CriteriaBuilder criteriaBuilder = manager.getCriteriaBuilder();
 		CriteriaQuery<Person> criteriaQuery = criteriaBuilder.createQuery(Person.class);
 		Root<Person> from = criteriaQuery.from(Person.class);
@@ -70,8 +63,7 @@ public class DaoPerson {
 		
 		return persons;
    }
-   
-   
+     
    /**
     * Recherche une personne ayant pour identifiant id
     * @param id : identification de la personne à reccuperer
@@ -95,8 +87,6 @@ public class DaoPerson {
 	   
 	   transaction.commit();
    }
-
-
 
    /**
     * Supprime la personne person

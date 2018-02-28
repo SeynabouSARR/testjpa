@@ -4,42 +4,35 @@ import java.util.ArrayList;
 
 import java.util.Collection;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
 
 import dao.*;
 
-public class Main {
+public class Main{
 
 	public static void main(String[] args) {
 		
 	    DaoPerson personManager = new DaoPerson(); //Gestionnaire de Person
-	    DaoDevice deviceManager = new DaoDevice(); //Gestionnaire de Device
 	    DaoHome homeManager = new DaoHome();  //Gestionnaire de Home
 	    DaoHeater heaterManager = new DaoHeater(); //Gestionnaire de Heater
 	    DaoElectronicDevice electronicDeviceManager = new DaoElectronicDevice(); //Gestionnaire de ElectronicDevice
-	    
-	    
+	       
 		try {
 			//Creation et initialisation
-	        Collection <Heater> heaters=  new ArrayList();
+	        Collection <Heater> heaters=  new ArrayList<Heater>();
 			Heater heater= new Heater();
 			heaters.add(heater);
-			Collection <Home> homes= new ArrayList();
+			Collection <Home> homes= new ArrayList<Home>();
 			Home home = new Home();
-			Collection<ElectronicDevice> electronicDevices = new ArrayList();
+			Collection<ElectronicDevice> electronicDevices = new ArrayList<ElectronicDevice>();
 			ElectronicDevice ed= new ElectronicDevice();
 			electronicDevices.add(ed);
-			Collection<Person> persons = new ArrayList(); //une liste d'amis
+			Collection<Person> persons = new ArrayList<Person>(); //une liste d'amis
 			Person p = new Person("SARR", "Seynabou","13 A rue du Bois Perrin",persons, homes,electronicDevices);
-			Collection<Person> pers= new ArrayList();
+			Collection<Person> pers= new ArrayList<Person>();
 			Person person= new Person("BOUE", "MELAINE","BOIS PERRIN", null, null, null);
 			persons.add(person); 
 			pers.add(p);
-			pers.add(person);
-			
+			pers.add(person);			
 			//Ajout des elements dans la base de données
 			heaterManager.createHeater(heater); 
 			homeManager.createHome(home);  
@@ -58,14 +51,7 @@ public class Main {
 			//test.DeletePerson(p);
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
-		
-		
-		
-		
-		
-		
-		
+		}			
 	}	
 
 }

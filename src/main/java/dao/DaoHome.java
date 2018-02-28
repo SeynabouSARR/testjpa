@@ -7,8 +7,7 @@ import javax.persistence.criteria.*;
 
 import domain.*;
 
-public class DaoHome {
-	
+public class DaoHome {	
 	Dao managerObject;
 	EntityManager manager;
 	EntityTransaction transaction;
@@ -18,17 +17,12 @@ public class DaoHome {
 		manager = managerObject.getManager();
 		transaction = manager.getTransaction();
 	} 
-      
-	
-    
 	
 	public void close() {
 		managerObject.close();
 		manager.close();
 	}
-	
-	
-	
+		
 	/************************CRUD*************************/
 	/************************CRUD*************************/
 	/************************CRUD*************************/
@@ -90,8 +84,6 @@ public class DaoHome {
    {
 	   manager.merge(home);
    }
-
-
 
    /**
     * Supprime la Home home
