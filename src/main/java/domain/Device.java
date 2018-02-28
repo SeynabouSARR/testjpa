@@ -5,23 +5,36 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-  public class Device {    
+/**
+ * 
+ * @author Seynabou SARR et Melaine BOUE
+ *
+ */
+ public class Device {    
 	@Id
 	@GeneratedValue
 	long id;
+/**
+ * constructor.
+ */
     public Device() {
-	}  
-    
+	} 
+/**
+ * le getteur
+ * @return id
+ */
   public long getId() {
-		return id;
-	}
-	
+	  return id;
+	  }
+/**
+ * le setteur	
+ * @param id
+ */
   public void setId(long id) {
-		this.id = id;
-	}
-	
-	@Override
+	  this.id = id;
+	  }
+@Override
   public String toString() {
-		return "Devices [id=" + id + "]";
+	return "Devices [id=" + id + "]";
 	}
  }

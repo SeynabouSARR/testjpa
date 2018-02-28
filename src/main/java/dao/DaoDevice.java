@@ -1,30 +1,40 @@
 package dao;
 
 import java.util.List;
-
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.*;
 
 import domain.*;
 /**
- * La classe Dao Device
+ * La classe Dao Device.
  * @author Seynabou SARR & Melaine BOUE
  *
- */
+*/
 public class DaoDevice {
+/**
+ * est l'objet dao.
+*/
 	Dao managerObject;
+/**
+ * le manager.
+*/
 	EntityManager manager;
+/**
+ * permet la transaction.
+*/
 	EntityTransaction transaction;
 /**
- * Constructeur
- */
+ * ouverture de la connexion.
+*/
   public DaoDevice() {
 		managerObject = new Dao();
 		manager = managerObject.getManager();
 		transaction = manager.getTransaction();
 		}    
 /**
- * Fermer la connexion
+ * Fermer la connexion.
 */
   public void close() {
 	  managerObject.fermer();
@@ -33,8 +43,8 @@ public class DaoDevice {
 /************************CRUD*************************/
 /************************CRUD*************************/
 /**
- * Cr�er une Device dans la base de données
- * @param d: le device � inserer dans la base de donn�es
+ * Cr�er une Device dans la base de données.
+ * @param d: le device � inserer dans la base de donn�es.
 */
   public void createDevice(Device d){
 	  transaction.begin();
@@ -42,7 +52,7 @@ public class DaoDevice {
 	  transaction.commit();
 	  }	
 /**
- * Afficher les données relatives à toutes les Devices
+ * Afficher les données relatives à toutes les Devices.
 */
   public void showDevices() {
 	  List<Device> resultList = manager.createQuery("Select a From Device a", Device.class).getResultList();
@@ -51,8 +61,8 @@ public class DaoDevice {
 		  }
 	  }   
 /**
- * Reccupère la liste des Devices de la base de données avec criteria
- * @return la liste des Devices
+ * Reccupère la liste des Devices de la base de données avec criteria.
+ * @return la liste des Devices.
 */
   public List<Device> getDevices() {
 	  CriteriaBuilder criteriaBuilder = manager.getCriteriaBuilder();
@@ -64,24 +74,24 @@ public class DaoDevice {
 	  return Devices;
    }   
 /**
- * Recherche une Device ayant pour identifiant id
- * @param id : identification de la Device à reccuperer
- * @return la Device ayant pour identifiant id
+ * Recherche une Device ayant pour identifiant id.
+ * @param id : identification de la Device à reccuperer.
+ * @return la Device ayant pour identifiant id.
 */
    public Device getDevice(int id) {
 	   Long identifiant = new Long(id);
 	   return manager.find(Device.class, identifiant);
 	   } 
 /**
- * Mis à jour la Device dans la base de données
- * @param Device : nouvelle données
+ * Mise � jour la Device dans la base de données.
+ * @param Device : nouvelle données.
 */
   public void update(Device device) {
 	  manager.merge(device);
 	  }
 /**
- * Supprime le Device Device
- * @param Device : Device à supprimer
+ * Supprime le Device Device.
+ * @param Device : Device � supprimer.
 */
   public void delete(Device device) {
 	  manager.remove(device);

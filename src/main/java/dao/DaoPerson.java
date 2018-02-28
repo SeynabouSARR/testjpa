@@ -71,33 +71,29 @@ public class DaoPerson {
     * @param id : identification de la personne à reccuperer
     * @return la personne ayant pour identifiant id
     */
-   public Person getPerson(int id)
-   {
+  public Person getPerson(int id) {
 	  Long identifiant = new Long(id);
-	  return manager.find(Person.class, identifiant);
-	   
-   }
+	  return manager.find(Person.class, identifiant);   
+     }
    
-   /**
-    * Mis à jour la personne person dans la base de données
-    * @param person : nouvelle données
-    */
-   public void update(Person person)
-   {
+ /**
+ * Mis à jour la personne person dans la base de données.
+ * @param person : nouvelle données.
+*/
+  public void update(Person person) {
 	   transaction.begin();
 	   //manager.merge(person);
 	   transaction.commit();
-   }
+       }
 
-   /**
-    * Supprime la personne person
-    * @param person : personne à supprimer
-    */
-	public void delete(Person person)
-	{
+/**
+ * Supprime la personne person.
+ * @param person : personne à supprimer.
+*/
+  public void delete(Person person)	{
 		transaction.begin();
-	   manager.remove(person);
-	   transaction.commit();
-	}
+	    manager.remove(person);
+	    transaction.commit();
+	    }
 }
 

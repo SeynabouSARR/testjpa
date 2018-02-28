@@ -8,14 +8,11 @@ import java.util.Collection;
 import dao.*;
 
 public class Main{
-
-	public static void main(String[] args) {
-		
+  public static void main(String[] args) {	
 	    DaoPerson personManager = new DaoPerson(); //Gestionnaire de Person
 	    DaoHome homeManager = new DaoHome();  //Gestionnaire de Home
 	    DaoHeater heaterManager = new DaoHeater(); //Gestionnaire de Heater
-	    DaoElectronicDevice electronicDeviceManager = new DaoElectronicDevice(); //Gestionnaire de ElectronicDevice
-	       
+	    DaoElectronicDevice electronicDeviceManager = new DaoElectronicDevice(); //Gestionnaire de ElectronicDevice       
 		try {
 			//Creation et initialisation
 	        Collection <Heater> heaters=  new ArrayList<Heater>();

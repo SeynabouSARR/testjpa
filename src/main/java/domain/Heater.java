@@ -4,7 +4,15 @@ import javax.persistence.Entity;
 
 
 @Entity
-public class Heater extends Device {
-	public Heater() {		
+/**
+ * 
+ * @author Seynabou SARR et Melaine BOUE
+ *
+ */
+  public class Heater extends Device {
+/**
+ * constructor.
+ */
+	public Heater() {
 	}	
 }
