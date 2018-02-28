@@ -15,7 +15,6 @@ Le TP a pour objectif de manipuler les données avec JPA et un système de base 
 <ul>
   <li>JPA</li>
   <li>Pattern DAO</li>
-  <li>JAX-RS</li>
 </ul>
 
 
@@ -28,9 +27,6 @@ Le TP a pour objectif de manipuler les données avec JPA et un système de base 
   <li>Explorer le dossier du projet, lancer le serveur de base de données HSQLDB</li>  
   <img src="./images/explorer.jpg" />
   <br/>
-  <h2>ou</h2>
-  <li>Lancer le serveur MySQL</li>
-  <li>Créer une base de données du nom de "testjpa"</li>
   
   <li>Lancer votre application Maven en cliquant sur Run > Run as > Maven Build > </li>
   
