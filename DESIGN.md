@@ -15,7 +15,6 @@ Le diagramme UML utilisé est le suivant
 
 <img src="./images/class_diagram.PNG"/>
 
-<h2>Patron de conception utilisé</h2>
 
 
 
