@@ -20,25 +20,12 @@ public class JpaTest {
 		try {
 			
 			
-/*Person p = new Person();
-			p.setName("martin");
-			manager.persist(p);*/
-	
-			
-			
 		
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		tx.commit();
-//		String s = "SELECT e FROM Person as e where e.name=:name";
-		
-//		Query q = manager.createQuery(s,Person.class);
-//		q.setParameter("name", "martin"); 
-//		List<Person> res = q.getResultList();
-		
-//		System.err.println(res.size());
-//		System.err.println(res.get(0).getName());
+
 		
 		manager.close();
 		factory.close();
